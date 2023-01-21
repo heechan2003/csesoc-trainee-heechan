@@ -19,6 +19,7 @@ html, body {
     text-align: center;
 	font-family: 'Montserrat', sans-serif;
     background-color: #AFDBCD;
+	color: #FFEBCD;
     border:2px solid #FFEBCD;
 	border-radius: 50%;
 	-moz-border-radius:50%;
