@@ -3,61 +3,69 @@ html, body {
 	overflow-x: hidden;
 	background-color: #FFEBCD;
 	color: #FFEBCD;
+	scroll-behavior: smooth;
 }
 
 .nav {
-	position: fixed;
-	top:15px;
-	width:100%;
-	z-index: 99;
-  }
+    position: fixed;
+    top:15px;
+    width:100%;
+    z-index: 99;
+}
 
 .circle {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+	font-family: 'Montserrat', sans-serif;
+    background-color: #AFDBCD;
+    border:2px solid #FFEBCD;
 	border-radius: 50%;
-	position: relative;
-	cursor: pointer;
-	text-align: center;
-	background-color: #C6B397;
-	border-color: #C6B397;
-	font-family: 'Vollkorn SC';
-	font-size: 22px;
+	-moz-border-radius:50%;
+    -webkit-border-radius:50%;
+	margin-right:10px;
+	margin-top: 10px;
+	float: left;
+	background-image: radial-gradient(circle at center ,  #FFEBCD 50%, transparent 50%);
+	background-repeat: no-repeat;
+	transition: background-size .5s, color .5s;
+	background-size: 0 0;
+	background-position: 50% 50%;
+	text-decoration: none;
+}
+
+.circle:visited {
+	color: #FFEBCD;
+}
+
+.circle:hover{
+    background-size: 200% 200%;
+    color: #AFDBCD;
+	text-decoration: none;
 }
 
 .circle:nth-child(1) {
-	width: 170px;
-	height: 170px;
-	line-height: 170px;
-	margin-right:5px;
-	float: left;
-	color: black;
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+	margin-left: 10px;
+	font-size: 22px;
 }
 
-.circle:nth-child(2) {
-	width: 60px;
-	height: 60px;
-	margin-right: 10px;
-	line-height: 60px;
-	float: left;
-	color: black;
+.circle:nth-child(2),
+.circle:nth-child(4) {
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+	font-size: 15px;
 }
 
 .circle:nth-child(3) {
-	width: 120px;
-	height: 120px;
-	margin-right: 20px;
-	margin-top: 30px;
-	line-height: 120px;
-	float: left;
-	color: black;
-}
-
-.circle:nth-child(4) {
-	width: 75px;
-	height: 75px;
-	margin-right: 20px;
-	line-height: 75px;
-	float: left;
-	color: black;
+    width: 120px;
+    height: 120px;
+    margin-top: 30px;
+    line-height: 120px;
+	font-size: 20px;
 }
 
 .holder{
@@ -262,32 +270,77 @@ h3 {
 }
 
 .link {
+	position: relative;
 	border-radius: 50%;
-	width: 100px;
-	height: 100px;
-	line-height: 100px;
-	text-align: center;
-	font-size: 50px;
-	color: #FFEBCD;
+	width: 150px;
+	height: 150px;
 	background-color: #D5BEC2;
-	margin: 0 4px;
-	border: 2px #D5BEC2;
 	transition: all 0.3 ease;
-	text-decoration: none;
+	text-align: center;
 }
 
-.link:visited {
-	text-decoration: none;
+.fab {
+	display: inline-block;
+	position: relative;
+	padding: 40px;
+	font-size: 60px;
 	color: #FFEBCD;
+	text-decoration: none;
 }
 
-.link:hover {
+.link:hover{
 	color: #D5BEC2;
 	background-color: #FFEBCD;
 	text-decoration: none;
 }
 
-.link:visited, .link:active {
+.fab:visited {
+	text-decoration: none;
+	color: #FFEBCD;
+}
+
+.fab:hover {
+	color: #D5BEC2;
+	background-color: #FFEBCD;
+	text-decoration: none;
+}
+
+.fab:visited, .fa:active {
 	color: #FFEBCD;
 	text-decoration: none;
+}
+
+.tag-back {
+	position: absolute;
+	display: none;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #FFEBCD;
+	color: #D5BEC2;
+	border-radius: 50%;
+}
+
+.tag {
+	position: absolute;
+	display: inline-block;
+	font-size: 30px;
+	top: 50%;
+	left: 50%;
+	font-family: 'Raleway';
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.links a:hover > .fa-discord {
+	display: none;
+}
+
+.link:hover .tag-back{
+	display: inline;
 }
