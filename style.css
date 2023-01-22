@@ -112,7 +112,7 @@ h3 {
 }
 
 .container:nth-child(1) {
-	margin-top:150px;
+	margin-top:100px;
 	text-align: center;
 	border: 1px solid #B5AA99;
 	background-color: #B5AA99;
@@ -353,4 +353,13 @@ h3 {
 
 .link:hover .tag-back{
 	display: inline;
+}
+
+.reminder {
+	position: relative;
+	color: #987A9A;
+	left: 1500px;
+	font-size: 25px;
+	font-family: 'Lato';
+
 }
