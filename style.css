@@ -147,6 +147,8 @@ h3 {
 	width: 300px;
 	height: 300px;
 	border-radius: 50%;
+	border: 5px solid #FFEBCD;
+	filter: brightness(110%);
 	left: 0px;
 	float: left;
 	margin-right: 50px;
@@ -259,6 +261,9 @@ h3 {
 	z-index: 1;
 	overflow: hidden;
 	text-align: center;
+	border-top: 5px solid #FFEBCD;
+	border-bottom: 5px solid #FFEBCD;
+	padding-top: 5px;
 }
 
 .youtube-premium {
